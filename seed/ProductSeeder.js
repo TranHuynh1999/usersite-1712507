@@ -1,6 +1,6 @@
 var Product=require('../models/product');
 var mongoose=require('mongoose');
-mongoose.connect('localhost:27017/myDatabase');
+mongoose.connect('mongodb://localhost:27017/myDatabase', { useNewUrlParser: true, useFindAndModify: false, useCreateIndex: true, useUnifiedTopology: true })
 var products=[
     new Product({
      imagePath:'images/p1.jpg',
