@@ -36,15 +36,20 @@
 <body>
       <div class="signin">
             <div class="center">
-                <h3>SIGN IN</h3>
-                <if hasErrors=1><each mess in messages
-                    span.err= mess></if>
+                <h3>ĐĂNG NHẬP</h3>
+                <% if (hasErrors) { %>
+                    <div class="alert alert-danger">
+                        Đăng nhập không thành công !
+                    </div>
+                <% } %>
+            
+            
                 <form action="/signin" method="POST">
                     <div class="field">
                         <div class="label" for="email">Email</div><input type="email" name="email" placeholder="Email" /></div>
                     <div class="field">
-                        <div class="label" for="password">Password</div><input type="password" name="password" placeholder="Password" /></div><button class="btn" type="submit">Sign In</button>
-                    <p>Don't Have An Account?-> <a href="/signup">Register an account</a></p>
+                        <div class="label" for="password">Mật khẩu</div><input type="password" name="password" placeholder="Mật khẩu" /></div><button class="btn" type="submit">Đăng nhập</button>
+                    <p>Bạn chưa có tài khoản?-> <a href="/signup">Đăng ký tại đây.</a></p>
                 </form>
             </div>
         </div>

@@ -35,14 +35,19 @@
    </head>
 <body>
     <div class="signin">
-        <h1 style="color: #333; font-size:2em;"> Don't Have An Account</h1>
+        <h1 style="color: #333; font-size:2em;"> Bạn Chưa Có Tài Khoản</h1>
                 <div class="center">
-                    <h3>SIGN UP</h3>
+                    <h3>ĐĂNG KÝ</h3>
+                    <% if (hasErrors) { %>
+                        <div class="alert alert-danger">
+                          Đăng ký không thành công (Tài khoản đã có). 
+                        </div>
+                    <% } %>
                     <form action="/signup" method="POST">
                         <div class="field">
                             <div class="label" for="email">Email</div><input style="width:80%;" type="email" name="email" placeholder="Email" /></div>
                         <div class="field">
-                            <div class="label" for="password">Password</div><input style="width:80%;" width="80%" type="password" name="password" placeholder="Password" /></div><button class="btn" type="submit">Sign Up</button></form>
+                            <div class="label" for="password">Mật khẩu</div><input style="width:80%;" width="80%" type="password" name="password" placeholder="Mật khẩu (ít nhất 6 ký tự)" /></div><button class="btn" type="submit">Đăng Ký</button></form>
                 </div>
             </div>
         </div>

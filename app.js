@@ -12,16 +12,7 @@ var url1= "mongodb+srv://admin:admin@user-1712507-hgdqg.mongodb.net/test?retryWr
 mongoose.connect(url1, { useNewUrlParser: true, useCreateIndex: true ,useUnifiedTopology: true}).then(
 	() => {
 		console.log('KN THANH CONG')
-		let Customer = module.exports = mongoose.model("san_pham", sp_Schema, "san_pham");
-		Customer.find({}).exec(function (err, rs) {
-			if (err) {
-				console.log("LOI~~ nua roi");
-			} else {
-				console.log('KN COLLECTION THANH CONG')
-				console.log(rs);
-			}
-		});
-
+		
 
 	},
 	err => { /** handle initial connection error */

@@ -8,9 +8,11 @@ var schema = new Schema({
     email: {type: String, required: true},
     password: {type: String, required: true}
 });
+// ma hoa mk
 schema.methods.encryptPassword= function(password){
     return bcrypt.hashSync(password, bcrypt.genSaltSync(5),null);
 };
+//giai ma mk
 schema.methods.validPassword = function(password){
     return bcrypt.compareSync(password, this.password);
 };

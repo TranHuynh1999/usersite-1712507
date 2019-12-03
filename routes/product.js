@@ -12,7 +12,4 @@ router.get('/product.html', function(req, res, next) {
 });
 
   
-  
-  
-  
 module.exports = router;
