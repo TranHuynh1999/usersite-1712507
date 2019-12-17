@@ -653,7 +653,7 @@
          <script>
             toys.render();
             
-            toys.cart.on('toys_checkout', function (evt) {
+            toys.cart.on('/checkout.html', function (evt) {
                var items, len, i;
             
                if (this.subtotal() > 0) {
