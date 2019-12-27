@@ -27,7 +27,7 @@ passport.use('local.signup',new LocalStrategy({
  User.findOne({ 'email': email }, function(err, user) {
         if (err) { return done(err); }
         if (user) {
-          return done(null, false, { message : 'Email is already in use.'})
+          return done(null, false, { message : 'Email đã được sử dụng.'})
         }
        var newUser= new User();
        newUser.email= email;
@@ -51,11 +51,11 @@ passport.use('local.signup',new LocalStrategy({
 User.findOne({ 'email': email }, function(err, user) {
        if (err) { return done(err); }
        if (!user) {
-         return done(null, false, { message : 'Not user found'})
+         return done(null, false, { message : 'Tài khoản không tồn tại.'})
        }
        if(!user.validPassword(password)){
       
-           return done(null,false,{message:'Wrong password'})
+           return done(null,false,{message:'Sai mật khẩu.'})
        }
         return done(null, user);
     

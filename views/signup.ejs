@@ -43,7 +43,9 @@
                     <h3>ĐĂNG KÝ</h3>
                     <% if (hasErrors) { %>
                         <div class="alert alert-danger">
-                          Đăng ký không thành công (Tài khoản đã có). 
+                            <% locals.messages.forEach(function(message){  %>
+                                <%= message %>
+                                <%});%>
                         </div>
                     <% } %>
                     <form action="/signup" method="POST">

@@ -42,10 +42,12 @@
                 <h3>ĐĂNG NHẬP</h3>
                 <% if (hasErrors) { %>
                     <div class="alert alert-danger">
-                        Đăng nhập không thành công !
+                        <% locals.messages.forEach(function(message){  %>
+                            <%= message %>
+                            <%});%>
                     </div>
                 <% } %>
-            
+               
             
                 <form action="/signin" method="POST">
                     <div class="field">

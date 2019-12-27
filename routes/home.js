@@ -84,7 +84,7 @@ router.get('/signup', function(req, res, next) {
 router.post('/signup', 
 [
   check('email', 'Your email is not valid').isEmail(),
-  check('password', 'Your password must be at least 6 characters').isLength({ min: 6 })
+  check('password','Mật khẩu ít nhất 6 ký tự.').isLength({ min: 6 })
   ],
   (function (req, res, next) {
 
