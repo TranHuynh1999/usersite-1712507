@@ -1,38 +1,4 @@
-<!DOCTYPE html>
-<html lang="vn">
-   <head>
-      <title>Trang chủ</title>
-      <!--meta tags -->
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="keywords" content="Toys Shop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-         Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-      <script>
-         addEventListener("load", function () {
-         	setTimeout(hideURLbar, 0);
-         }, false);
-         
-         function hideURLbar() {
-         	window.scrollTo(0, 1);
-         }
-      </script>
-      <link rel="stylesheet"  href='../stylesheets/style.css'type="text/css" media="all">
-      <!--//meta tags ends here-->
-      <!--booststrap-->
-      <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
-      <!--//booststrap end-->
-      <!-- font-awesome icons -->
-      <link href="css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
-      <!-- //font-awesome icons -->
-      <!--Shoping cart-->
-      <link rel="stylesheet" href="css/shop.css" type="text/css" />
-      <!--//Shoping cart-->
-      <!--stylesheets-->
-      <link href="css/style.css" rel='stylesheet' type='text/css' media="all">
-      <!--//stylesheets-->
-      <link href="//fonts.googleapis.com/css?family=Sunflower:500,700" rel="stylesheet">
-      <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-   </head>
+
 <body>
        <!--headder-->
        <% include partials/header.ejs %>
@@ -47,15 +13,15 @@
                             <%});%>
                     </div>
                 <% } %>
-               
-            
-                <form action="/signin" method="POST">
+      
+                <form action="/user/signin" method="POST">
                     <div class="field">
                         <div class="label" for="email">Email</div><input type="email" name="email" placeholder="Email" /></div>
                     <div class="field">
                         <div class="label" for="password">Mật khẩu</div><input type="password" name="password" placeholder="Mật khẩu" /></div><button class="btn" type="submit">Đăng nhập</button>
-                    <p>Bạn chưa có tài khoản?-> <a href="/signup">Đăng ký tại đây.</a></p>
+                        <p>Bạn chưa có tài khoản?-> <a href="/user/signup">Đăng ký tại đây.</a></p>
                 </form>
+                
             </div>
                 
         </div>

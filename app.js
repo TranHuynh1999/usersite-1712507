@@ -42,13 +42,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/about.html', require('./routes/about'))  ;
-app.use('/contact.html',require('./routes/contact'));
 app.use('/',require('./routes/home'));
-app.use('/index.html',require('./routes/home'));
-app.use('/product.html', require('./routes/product'));
-app.use('/checkout.html',require('./routes/checkout'));
-app.use('/shop.html',require('./routes/shop'));
+app.use('/product', require('./routes/product'));
+app.use('/user',require('./routes/user'));
 //conect to db
 
 

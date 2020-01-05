@@ -5,6 +5,7 @@ var bcrypt = require('bcrypt-nodejs');
 // định nghĩ cấu trúc user model
 var Schema = mongoose.Schema;
 var schema = new Schema({
+
     email: {type: String, required: true},
     password: {type: String, required: true}
 });
@@ -16,4 +17,5 @@ schema.methods.encryptPassword= function(password){
 schema.methods.validPassword = function(password){
     return bcrypt.compareSync(password, this.password);
 };
-module.exports = mongoose.model('User', schema);
+var user = mongoose.model('User', schema);
+module.exports= user
