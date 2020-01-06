@@ -1914,7 +1914,7 @@ var defaults = module.exports = {
     styles: '',
 
     strings: {
-        button: 'Kiểm tra giỏ hàng',
+        button: 'Xem giỏ hàng',
         subtotal: 'Tổng tiền:',
         discount: 'Khuyến mãi:',
         empty: 'Giỏ hàng của bạn trống'

@@ -17,5 +17,5 @@ schema.methods.encryptPassword= function(password){
 schema.methods.validPassword = function(password){
     return bcrypt.compareSync(password, this.password);
 };
-var user = mongoose.model('User', schema);
+var user = mongoose.model('users', schema);
 module.exports= user

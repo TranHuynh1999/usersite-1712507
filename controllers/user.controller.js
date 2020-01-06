@@ -2,21 +2,21 @@ var  passport = require('passport')
 var User=require('../models/user.model');
 
 /* GET sign-in page. */    
-module.exports.getSignin= function(req, res, next) {
+module.exports.getSignin= async function(req, res, next) {
     // Hiển thị trang và truyển lại những tin nhắn từ phía server nếu có
     var messages = req.flash('error')
     res.render('signin.ejs',{ 
       messages: messages,
       hasErrors: messages.length > 0,
      })
-    //  var user=User.get('users').find({email: email}).value();
+    const user=await User.find({});
+    console.log(user);  
     //  res.cookie=('userID',user.id);
   };
 // Xử lý thông tin khi có người đăng nhập
-module.exports.postSignin=passport.authenticate('local.signin', { successRedirect: '/',
+module.exports.postSignin= passport.authenticate('local.signin', { successRedirect: '/',
     failureRedirect: '/user/signin',
     failureFlash: true,
-    
  });
 
     /* GET sign-up page. */
