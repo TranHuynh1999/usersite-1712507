@@ -9,8 +9,7 @@ module.exports.getSignin= async function(req, res, next) {
       messages: messages,
       hasErrors: messages.length > 0,
      })
-    const user=await User.find({});
-    console.log(user);  
+
     //  res.cookie=('userID',user.id);
   };
 // Xử lý thông tin khi có người đăng nhập
