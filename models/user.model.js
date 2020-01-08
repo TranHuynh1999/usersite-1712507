@@ -8,9 +8,7 @@ var schema = new Schema({
 
     email: {type: String, required: true},
     password: {type: String, required: true},
-    sdt: {type: Number,required: true},
-    hoten: {type: String, required: true},
-    diachi: { type: String, required: true},
+   
 });
 // ma hoa mk
 schema.methods.encryptPassword= function(password){
